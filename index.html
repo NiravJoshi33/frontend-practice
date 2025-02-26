@@ -4,9 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <style>
+      body {
+        background-color: #222;
+        color: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      h1 {
+        text-align: center;
+        margin: 1rem;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin: 1rem;
+      }
+
+      a {
+        color: #fff;
+        text-decoration: none;
+
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        width: fit-content;
+        transition: all 0.3s ease-in-out;
+        display: block;
+        background-color: #333;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <h1>Practices</h1>
-    <a href="/frontend-practice/recipe-page-main">Responsive Recipe Page</a>
+    <div class="links">
+      <a href="/frontend-practice/recipe-page-main">Responsive Recipe Page</a>
+      <a href="/frontend-practice/social-links-profile-main"
+        >Social Links Profile Card</a
+      >
+    </div>
   </body>
 </html>
