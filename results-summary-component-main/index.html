@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Results summary component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <template>
+        <div class="summary-item">
+          <div class="type">
+            <img src="" alt="" class="icon" />
+            <p class="type-name"></p>
+          </div>
+
+          <div class="test-score">
+            <p class="score"></p>
+            <p class="total-score"></p>
+          </div>
+        </div>
+      </template>
+
+      <div class="result">
+        <p class="result-title">Your Result</p>
+        <div class="circle">
+          <p class="score">76</p>
+          <p class="max-score">of 100</p>
+        </div>
+        <p class="result-cat">Great</p>
+        <p class="description">
+          You scored higher than 65% of the people who have taken these tests.
+        </p>
+      </div>
+      <div class="summary">
+        <p class="title">Summary</p>
+        <div class="summary-items-container"></div>
+        <button>Continue</button>
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://niravjoshi.dev">Nirav Joshi</a>.
+      </div>
+    </footer>
+  </body>
+</html>

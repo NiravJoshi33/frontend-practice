@@ -1,0 +1,225 @@
+:root {
+  --light-red: hsl(0, 100%, 67%);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --green-teal: hsl(166, 100%, 37%);
+  --cobalt-blue: hsl(234, 85%, 45%);
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --light-lavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* gradients */
+  /* For background */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  /* For circle */
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%);
+
+  --bg-primary: var(--pale-blue);
+  --bg-secondary: var(--white);
+
+  --text-primary: var(--persian-blue);
+  --text-secondary: var(--light-lavender);
+
+  --border-radius: 1rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: "Hanken Grotesk", serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 32rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+  background: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+  border-radius: var(--border-radius);
+  padding: 2rem;
+
+  @media (max-width: 600px) {
+    width: 85%;
+    border-radius: 2rem;
+    margin: 1rem;
+  }
+}
+
+.result-title {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--violet-blue), var(--persian-blue));
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+}
+
+.score {
+  font-size: 3rem;
+  color: var(--white);
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.max-score {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.result-cat {
+  color: white;
+  margin-top: 1.5rem;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 1.5em;
+}
+
+.summary {
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    width: 80%;
+  }
+}
+
+.summary .title {
+  align-self: flex-start;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--dark-gray-blue);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+.summary-items-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.summary-item {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.summary-item.reaction {
+  background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.summary-item.memory {
+  background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.summary-item.verbal {
+  background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.summary-item.visual {
+  background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+.summary-item p {
+  margin: 0;
+}
+
+.type,
+.test-score {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.test-score .score {
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--dark-gray-blue);
+}
+
+.test-score .total-score {
+  color: var(--dark-gray-blue);
+  opacity: 0.5;
+}
+
+.summary button {
+  width: 100%;
+  padding: 0.5rem 0;
+  border-radius: 2rem;
+  margin: 0 auto;
+  background-color: var(--dark-gray-blue);
+  color: var(--white);
+  margin-top: 2rem;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    background: linear-gradient(
+      var(--light-slate-blue),
+      var(--light-royal-blue)
+    );
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 1rem;
+}
